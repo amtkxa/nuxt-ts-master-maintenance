@@ -13,6 +13,9 @@
     "allowSyntheticDefaultImports": true,
     "allowJs": true,
     "baseUrl": ".",
+    "types": [
+      "vuetify"
+    ],
     "paths": {
       "~/*": ["./*"]
     }
