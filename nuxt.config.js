@@ -22,18 +22,17 @@ const host =
 
 export default {
   env: {
-    baseUrl:
-      process.env.BASE_URL ||
+    baseUrl: process.env.BASE_URL ||
       `http://${host}:${port}`
   },
   head: {
     title: "tt1",
-    meta: [
-      { charset: "utf-8" },
+    meta: [{
+        charset: "utf-8"
+      },
       {
         name: "viewport",
-        content:
-          "width=device-width, initial-scale=1"
+        content: "width=device-width, initial-scale=1"
       },
       {
         hid: "description",
@@ -41,26 +40,27 @@ export default {
         content: "Nuxt.js project"
       }
     ],
-    link: [
-      {
-        rel: "icon",
-        type: "image/x-icon",
-        href: "/favicon.ico"
-      }
-    ]
+    link: [{
+      rel: "icon",
+      type: "image/x-icon",
+      href: "/favicon.ico"
+    }]
   },
   /*
-  ** Customize the progress-bar color
-  */
-  loading: { color: "#3B8070" },
+   ** Customize the progress-bar color
+   */
+  loading: {
+    color: "#3B8070"
+  },
   /*
-  ** Build configuration
-  */
+   ** Build configuration
+   */
   css: ["~/assets/css/main.css"],
   build: {},
   modules: [
     "@nuxtjs/axios",
-    "~/modules/typescript.js"
+    "~/modules/typescript.js",
+    '@nuxtjs/vuetify'
   ],
   axios: {}
 }
