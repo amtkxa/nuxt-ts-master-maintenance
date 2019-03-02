@@ -5,7 +5,7 @@
       <v-divider class="mx-2" inset vertical></v-divider>
       <v-spacer></v-spacer>
       <!-- ダイアログ画面 -->
-      <v-dialog v-model="dialog" max-width="500px">
+      <v-dialog v-model="dialog" :max-width="options.width">
         <v-btn slot="activator" color="primary" dark class="mb-2">Create New User</v-btn>
         <v-card>
           <v-card-title>
@@ -56,7 +56,7 @@
         </td>
       </template>
       <template slot="no-data">
-        <v-btn color="primary" @click="initialize">Reset</v-btn>
+        <v-btn color="primary">Reset</v-btn>
       </template>
     </v-data-table>
   </div>
@@ -73,6 +73,9 @@ export default class UserList extends Vue {
   data() {
     return {
       dialog: false,
+      options: {
+        width: 500
+      },
       headers: [
         { text: "ID", value: "id" },
         { text: "First Name", value: "first_name" },
@@ -102,6 +105,9 @@ export default class UserList extends Vue {
   private get formTitle() {
     return this.editedIndex === -1 ? "New Item" : "Edit Item";
   }
+
+  private close() {}
+  private save() {}
 }
 </script>
 
