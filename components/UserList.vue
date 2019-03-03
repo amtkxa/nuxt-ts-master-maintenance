@@ -5,9 +5,9 @@
       <v-divider class="mx-2" inset vertical></v-divider>
       <v-spacer></v-spacer>
       <!-- ダイアログ画面 -->
-      <v-dialog v-model="dialog" :max-width="options.width">
+      <v-dialog v-model="dialog" :max-width="options.width" scrollable>
         <v-btn slot="activator" color="primary" dark class="mb-2">Create New User</v-btn>
-        <v-card>
+        <v-card :max-height="options.height">
           <v-card-title>
             <span class="headline">{{ formTitle }}</span>
           </v-card-title>
@@ -74,6 +74,7 @@ export default class UserList extends Vue {
     return {
       dialog: false,
       options: {
+        height: 500,
         width: 500
       },
       headers: [
