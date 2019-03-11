@@ -16,7 +16,8 @@
     "generate": "nuxt generate"
   },
   "devDependencies": {
-    "ts-loader": "5.3.3",
-    "typescript": "3.2.4"
+    "@types/node": "^11.10.4",
+    "ts-loader": "^5.3.3",
+    "typescript": "^3.3.3333"
   }
 }
